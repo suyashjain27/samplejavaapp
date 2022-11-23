@@ -9,4 +9,5 @@
             echo "No Service found"
          fi
     - name: deploy app
-      command: docker service create --name mysvc --replicas 2 -p 9080:8080 suyashjain27/devops:{{ build }}
+      command: docker login -u suyashjain27 -p Azure@1010
+      command: docker service create --name mysvc --replicas 2 -p 9080:8080 docker.io/suyashjain27/samplejavaapp:{{ build }}
